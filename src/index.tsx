@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Header} from "./domain/header";
 import {Home} from "./main/home";
 import {Container} from "./styles";
+import {StartForm} from "./main/startForm";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +15,7 @@ root.render(
   <React.StrictMode>
     <Header />
       <Container>
-        <Home />
+        <StartForm />
       </Container>
   </React.StrictMode>
 );

@@ -1,9 +1,6 @@
 import React from 'react'
-import {HomeContainer} from "./styles";
-import {Button} from 'react-bootstrap'
-import { faPenNib } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {HomeContainer, Title} from "./styles";
+import {ButtonStyled} from "../../components/buttonStyled";
 export interface HomeProps {
 
 }
@@ -11,7 +8,10 @@ export interface HomeProps {
 export const Home = (): JSX.Element => {
   return (
     <HomeContainer>
-        Home page
+        <Title>Bem vindo(a)!</Title>
+        <ButtonStyled
+            content='Começar'
+        />
     </HomeContainer>
   )
 }

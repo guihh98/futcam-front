@@ -4,5 +4,12 @@ export const HomeContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+export const Title = styled.p`
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 62px;
 `

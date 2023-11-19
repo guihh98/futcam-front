@@ -2,20 +2,27 @@ import React from 'react'
 import {Card, Form} from "react-bootstrap";
 import {FormWrapper} from "./styles";
 import {ButtonStyled} from "../../components/buttonStyled";
+import {ROUTES} from "../../sharedKernel/constants/routes";
+import {useNavigate} from "react-router-dom";
 
-export interface StartFormProps {
+export interface RegistrationProps {
 
 }
 
-export const StartForm = (): JSX.Element => {
-  return (
+export const Registration = (): JSX.Element => {
+    const navigate = useNavigate()
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        navigate(ROUTES.HUB.CAMERAS)
+    }
+        return (
       <FormWrapper>
           <Card
               bg='light'
               className='w-50'
           >
               <Card.Body>
-                  <Form>
+                  <Form onSubmit={handleSubmit}>
                       <Form.Group className='mb-3' controlId='formBasicEmail'>
                           <Form.Label>Digite seu nome</Form.Label>
                           <Form.Control type='text' placeholder='Nome' />

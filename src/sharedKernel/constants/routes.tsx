@@ -7,9 +7,10 @@ export const ROUTES = {
             EVALUATOR: '/register/evaluator/:challengeId',
             RESOLVER: '/register/resolver'
         },
-        HOME: '/contact'
+        CONTACT: '/contact'
     },
     HUB: {
+        ROOT: '/hub',
         CAMERAS: '/hub/cameras'
     },
 }

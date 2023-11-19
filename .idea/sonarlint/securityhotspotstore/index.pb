@@ -431,3 +431,11 @@ G.idea/sonarlint/issuestore/3/c/3cbbafddd5b3010ddcb07534addc002b92091d0e,8\8\88
 Q.idea/sonarlint/securityhotspotstore/a/5/a575ba29a826700d86784556c76f511799bc27d1,9\1\910df66383e50683b1eb1ba46910d9cb1ea6b1a6
 w
 G.idea/sonarlint/issuestore/a/5/a575ba29a826700d86784556c76f511799bc27d1,8\b\8b69d1ab9d2673990bd014d178b209ba89aaa2de
+K
+src/main/mainPage/styles.ts,4\1\41062d3d9437033d9623a3d34eb491fb8c8be560
+J
+src/main/welcome/index.tsx,b\f\bfb1c60d02384f23f0a3e1ccc1b7935784015a0a
+T
+$src/sharedKernel/constants/styles.ts,5\e\5e2f8b591665d9f6744880c83c4d2bf6ed1798ea
+J
+src/main/welcome/styles.ts,5\9\59662e6e95ecca2f9e3a20d5ec7947b4347c7e26

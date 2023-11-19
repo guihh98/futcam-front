@@ -4,6 +4,7 @@ import { ROUTES } from '../sharedKernel/constants/routes'
 import {Home} from "../main/home";
 import {Registration} from "../main/startForm";
 import {MainPage} from "../main/mainPage";
+import {Welcome} from "../main/welcome";
 export const RoutesBuilder = (): JSX.Element => {
     return (
         <Routes>
@@ -11,9 +12,11 @@ export const RoutesBuilder = (): JSX.Element => {
             {/*<Route path={ROUTES.NOT_FOUND} element={<NotFoundPage />} />*/}
             
             {/* Hotsite */}
-            <Route path={ROUTES.HOTSITE.ROOT} element={<Home />} />
-            <Route path={ROUTES.HOTSITE.REGISTER} element={<Registration />} />
-            <Route path={ROUTES.HUB.CAMERAS} element={<MainPage />} />
+            <Route path={ROUTES.HOTSITE.ROOT} element={<Home />} >
+                <Route path={ROUTES.HOTSITE.REGISTER} element={<Registration />} />
+                <Route path={ROUTES.HOTSITE.ROOT} element={<Welcome />} />
+                <Route path={ROUTES.HUB.CAMERAS} element={<MainPage />} />
+            </Route>
             
             {/* SETTINGS */}
             {/*<Route path={ROUTES.HUB.ROOT} element={<InnerPage></InnerPage>}>*/}

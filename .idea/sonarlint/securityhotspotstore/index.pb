@@ -435,7 +435,7 @@ K
 src/main/mainPage/styles.ts,4\1\41062d3d9437033d9623a3d34eb491fb8c8be560
 J
 src/main/welcome/index.tsx,b\f\bfb1c60d02384f23f0a3e1ccc1b7935784015a0a
-T
-$src/sharedKernel/constants/styles.ts,5\e\5e2f8b591665d9f6744880c83c4d2bf6ed1798ea
 J
 src/main/welcome/styles.ts,5\9\59662e6e95ecca2f9e3a20d5ec7947b4347c7e26
+O
+src/main/startForm/contracts.ts,4\5\45381bc0978f10e41b28604ffa5e8a44eef4d53c

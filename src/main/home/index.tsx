@@ -1,6 +1,7 @@
 import React from 'react'
-import {HomeContainer, Title} from "./styles";
-import {ButtonStyled} from "../../components/buttonStyled";
+import {HomeContainer, RouterWrapper} from "./styles";
+import {Outlet} from "react-router-dom";
+import {Header} from "../../domain/header";
 export interface HomeProps {
 
 }
@@ -8,10 +9,10 @@ export interface HomeProps {
 export const Home = (): JSX.Element => {
   return (
     <HomeContainer>
-        <Title>Bem vindo(a)!</Title>
-        <ButtonStyled
-            content='Começar'
-        />
+        <Header />
+        <RouterWrapper>
+            <Outlet />
+        </RouterWrapper>
     </HomeContainer>
   )
 }

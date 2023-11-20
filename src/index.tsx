@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Header} from "./domain/header";
-import {Home} from "./main/home";
 import {Container} from "./styles";
+import {CreateRoutes} from "./routes/routes";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Header />
       <Container>
-        <Home />
+          <CreateRoutes />
       </Container>
   </React.StrictMode>
 );

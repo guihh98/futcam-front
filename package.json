@@ -30,9 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -53,8 +51,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-input-mask": "^3.0.5",
-    "gh-pages": "^6.1.0"
-  },
-  "homepage": "https://guihh98.github.io/futcam-front"
+    "@types/react-input-mask": "^3.0.5"
+  }
 }

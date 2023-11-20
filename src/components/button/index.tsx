@@ -6,7 +6,7 @@ export interface BaseButtonProps {
     variant: string | 'primary'| 'secondary'| 'success'| 'danger'| 'warning'| 'info'| 'dark'| 'light'| 'link' | 
         'outline-primary'| 'outline-secondary'| 'outline-success'| 'outline-danger'| 'outline-warning'| 'outline-info' | 
         'outline-dark'| 'outline-light'
-    size: 'sm' | 'lg'
+    size: 'sm' | 'lg' 
     className?: string
     content: string | JSX.Element
     disabled?: boolean

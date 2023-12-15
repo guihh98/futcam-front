@@ -1,4 +1,3 @@
-import React from 'react'
 import {Title, WelcomeContainer} from "./styles";
 import {ButtonStyled} from "../../components/buttonStyled";
 import {useNavigate} from "react-router-dom";

@@ -1,4 +1,3 @@
-import React from 'react'
 import {CameraContainer, Container, Row} from './styles'
 
 export interface MainPageProps {

@@ -1,4 +1,3 @@
-import React from 'react'
 import {ButtonContainer} from "./styles";
 
 export interface ButtonStyledProps {

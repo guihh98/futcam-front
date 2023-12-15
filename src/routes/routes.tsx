@@ -1,10 +1,10 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ROUTES } from '../sharedKernel/constants/routes'
 import {Home} from "../main/home";
 import {Registration} from "../main/startForm";
 import {MainPage} from "../main/mainPage";
 import {Welcome} from "../main/welcome";
+import { SettingsPage } from '../main/settingsPage';
 export const RoutesBuilder = (): JSX.Element => {
     return (
         <Routes>
@@ -16,6 +16,7 @@ export const RoutesBuilder = (): JSX.Element => {
                 <Route path={ROUTES.HOTSITE.REGISTER} element={<Registration />} />
                 <Route path={ROUTES.HOTSITE.ROOT} element={<Welcome />} />
                 <Route path={ROUTES.HUB.CAMERAS} element={<MainPage />} />
+                <Route path={ROUTES.HOTSITE.SETTINGS.MAINPAGE} element={<SettingsPage />} />
             </Route>
             
             {/* SETTINGS */}

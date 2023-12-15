@@ -21,6 +21,7 @@ export const BaseButton = ({variant, size, className, content, disabled = false,
         size={size}
         className={className}
         disabled={disabled}
+        onClick={onClick}
       >
           {content}    
       </Button>

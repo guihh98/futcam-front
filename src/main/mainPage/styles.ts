@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 8%;
 `
 export const CameraContainer = styled.div`
   background-color: aquamarine;
@@ -15,10 +16,10 @@ export const CameraContainer = styled.div`
 `
 
 export const Row = styled.div`
-  width: 100%;
+  width: auto;
   padding: 0px 2rem;
   display: flex;
   gap: 24px;
-  height: 45%;
+  height: 40%;
   margin-top: 16px;
 `

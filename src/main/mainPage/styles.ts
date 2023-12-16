@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
 `
 export const CameraContainer = styled.div`
   background-color: aquamarine;
@@ -22,4 +21,9 @@ export const Row = styled.div`
   gap: 24px;
   height: 40%;
   margin-top: 16px;
+`
+
+export const Title = styled.p`
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
 `

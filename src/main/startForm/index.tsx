@@ -104,8 +104,8 @@ export const Registration = (): JSX.Element => {
                               name='whatsApp'
                               placeholder='WhatsApp'
                               value={form.fields.whatsApp.value}
-                              onChange={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
-                              onBlur={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
+                              onChange={(e) => handleInputChange(e.target.name, e.target.value, /^\(\d{2}\) \d{5}-\d{4}$/)}
+                              onBlur={(e) => handleInputChange(e.target.name, e.target.value, /^\(\d{2}\) \d{5}-\d{4}$/)}
                               className={`form-control ${(form.fields.whatsApp.isValid) ? 'is-valid' : ''} ${(!form.fields.whatsApp.isValid && form.fields.whatsApp.validated) ? 'is-invalid' : ''}`}
                           />
                       </Form.Group>

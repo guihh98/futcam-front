@@ -1,4 +1,3 @@
-import React from 'react';
 import { FooterContainer } from './styles';
 import { useSelector } from 'react-redux';
 

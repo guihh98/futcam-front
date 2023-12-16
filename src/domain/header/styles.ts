@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 12%;
+  height: 85px;
   max-height: 90px;
   background-color: #053d4b;
   display: flex;
   justify-content: space-between;
   padding: 12px;
+  position: fixed;
 `
 
 export const Logo = styled.div`

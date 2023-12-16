@@ -1,4 +1,3 @@
-import React from 'react'
 import {HomeContainer, RouterWrapper} from "./styles";
 import {Outlet} from "react-router-dom";
 import {Header} from "../../domain/header";

@@ -5,7 +5,7 @@ export const HomeContainer = styled.div`
 `
 export const RouterWrapper = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

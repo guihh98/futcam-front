@@ -9,9 +9,8 @@ export interface HeaderProps {
 
 }
 
-const configAction = () => {
-    console.log('teste')
-}
+// const configAction = () => {
+// }
 
 const getSettingsContent = (): JSX.Element => {
     return <FontAwesomeIcon icon={faGear} style={{color: "#ffffff"}} size={"2x"} />
@@ -27,7 +26,7 @@ export const Header = (): JSX.Element => {
             <FontAwesomeIcon icon={faVideo} style={{color: "#ffffff"}} size={"3x"} />
         </Logo>
         <ButtonsWrapper>
-            <BaseButton variant={"outline-light"} size={"sm"} content={getSettingsContent()} onClick={configAction} />
+            <BaseButton variant={"outline-light"} size={"sm"} content={getSettingsContent()} onClick={() => navigate(ROUTES.HOTSITE.SETTINGS.MAINPAGE)} />
         </ButtonsWrapper>
     </HeaderContainer>
   )

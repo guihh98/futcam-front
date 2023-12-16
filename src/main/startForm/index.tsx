@@ -4,7 +4,7 @@ import {FormWrapper} from "./styles";
 import {ButtonStyled} from "../../components/buttonStyled";
 import {ROUTES} from "../../sharedKernel/constants/routes";
 import {useNavigate} from "react-router-dom";
-import {FormFields, FormState} from "./contracts";
+import {FormFields, FormState, Field} from "./contracts";
 import InputMask from 'react-input-mask';
 export const Registration = (): JSX.Element => {
     const navigate = useNavigate()
@@ -38,9 +38,13 @@ export const Registration = (): JSX.Element => {
     })
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        const formValid = Object.values(form.fields).every(field => field.isValid === true)
+        if (!formValid){
+            return 
+        }
         navigate(ROUTES.HUB.CAMERAS)
     }
-    const handleInputChange = (fieldName: string, value:string):void => {
+    const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {
         setForm((prevForm) => ({
             ...prevForm,
             fields: {
@@ -48,15 +52,14 @@ export const Registration = (): JSX.Element => {
                 [fieldName]: {
                     ...prevForm.fields[fieldName as keyof FormFields],
                     value,
-                    isValid: validateField(fieldName, value),
+                    isValid: validateField(fieldName, value, regex),
                     validated: true
                 },
             },
         }))
     }
-
-    const validateField = (fieldName: string, value: string):boolean => {
-        return value.trim() !== ''
+    const validateField = (fieldName: string, value: string, regex: RegExp):boolean => {
+        return regex.test(value);
     }
         return (
       <FormWrapper>
@@ -68,17 +71,16 @@ export const Registration = (): JSX.Element => {
                   <Form onSubmit={handleSubmit}>
                       <Form.Group className='mb-3' controlId='formBasicName'>
                           <Form.Label className='fw-bold'>Digite seu nome</Form.Label>
-                          <Form.Control 
+                          <Form.Control
                               type='text'
                               name='name'
                               placeholder='Nome' 
                               value={form.fields.name.value}
                               isValid={form.fields.name.isValid}
                               isInvalid={!form.fields.name.isValid && form.fields.name.validated}
-                              onChange={(e) => handleInputChange(e.target.name,e.target.value)}
-                              onBlur={(e) => handleInputChange(e.target.name,e.target.value)}
+                              onChange={(e) => handleInputChange(e.target.name,e.target.value, /[a-zA-Z]/)}
+                              onBlur={(e) => handleInputChange(e.target.name,e.target.value, /[a-zA-Z]/)}
                           />
-                          {/*{errors.name && <Alert variant='danger'>{errors.name}</Alert>}*/}
                       </Form.Group>
                       <Form.Group className='mb-3' controlId='formBasicTeamName'>
                           <Form.Label className='fw-bold'>Digite o nome da pelada</Form.Label>
@@ -89,8 +91,8 @@ export const Registration = (): JSX.Element => {
                               value={form.fields.teamName.value}
                               isValid={form.fields.teamName.isValid}
                               isInvalid={!form.fields.teamName.isValid && form.fields.teamName.validated}
-                              onChange={(e) => handleInputChange(e.target.name,e.target.value)}
-                              onBlur={(e) => handleInputChange(e.target.name,e.target.value)}
+                              onChange={(e) => handleInputChange(e.target.name,e.target.value, /[a-zA-Z]/)}
+                              onBlur={(e) => handleInputChange(e.target.name,e.target.value, /[a-zA-Z]/)}
                           />
                       </Form.Group>
                       <Form.Group className='mb-3' controlId='formBasicWhatsApp'>
@@ -102,8 +104,8 @@ export const Registration = (): JSX.Element => {
                               name='whatsApp'
                               placeholder='WhatsApp'
                               value={form.fields.whatsApp.value}
-                              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
-                              onBlur={(e) => handleInputChange(e.target.name, e.target.value)}
+                              onChange={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
+                              onBlur={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
                               className={`form-control ${(form.fields.whatsApp.isValid) ? 'is-valid' : ''} ${(!form.fields.whatsApp.isValid && form.fields.whatsApp.validated) ? 'is-invalid' : ''}`}
                           />
                       </Form.Group>

@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import {CameraContainer, Container, Row, Title} from './styles'
+import { ButtonPress } from '../../components/buttonPressStyled'
 
 export interface MainPageProps {
 
@@ -26,19 +27,8 @@ const matchName = useSelector((state: any) => state.startForm.matchName)
                 </video>
             </CameraContainer>
         </Row>
-        <Row>
-            <CameraContainer>
-                <video muted autoPlay controls className='w-100 h-100'>
-                    <source src="https://www.earthcam.com/d42e510b-7c91-49dc-8dce-b0db4f15ce4a" type="video/mp4" />
-                    Seu navegador não suporta vídeo HTML5.
-                </video>
-            </CameraContainer>
-            <CameraContainer>
-                <video muted autoPlay controls className='w-100 h-100'>
-                    <source src="https://www.earthcam.com/d42e510b-7c91-49dc-8dce-b0db4f15ce4a" type="video/mp4" />
-                    Seu navegador não suporta vídeo HTML5.
-                </video>
-            </CameraContainer>
+        <Row className='align-items-center'>
+            <ButtonPress content='GRAVAR' mainColor='#2BA026' pressColor='#25C61D' shandowColor='#155912' fontSize='7rem' />
         </Row>
     </Container>
   )

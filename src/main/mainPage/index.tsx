@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import {CameraContainer, Container, Row} from './styles'
 
 export interface MainPageProps {
@@ -5,9 +6,10 @@ export interface MainPageProps {
 }
 
 export const MainPage = (): JSX.Element => {
+const matchName = useSelector((state: any) => state.startForm.matchName)
   return (
     <Container>
-      Nome da pelada que ta jogando
+      nome - {matchName}
         <Row>
             <CameraContainer>
                 <video muted autoPlay controls className='w-100 h-100'>

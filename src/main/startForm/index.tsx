@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
-import {Alert, Card, Form} from "react-bootstrap";
+import {Card, Form} from "react-bootstrap";
 import {FormWrapper} from "./styles";
 import {ButtonStyled} from "../../components/buttonStyled";
 import {ROUTES} from "../../sharedKernel/constants/routes";
 import {useNavigate} from "react-router-dom";
-import {FormFields, FormState, Field} from "./contracts";
+import {FormFields, FormState} from "./contracts";
 import InputMask from 'react-input-mask';
+import { useDispatch } from 'react-redux';
+import { update } from '../../store/slices/startForm';
 export const Registration = (): JSX.Element => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
     const [form, setForm] = useState<FormState>({
         fields: {
             name: {
@@ -42,6 +46,7 @@ export const Registration = (): JSX.Element => {
         if (!formValid){
             return 
         }
+        dispatch(update({name: form.fields.name.value, matchName: form.fields.teamName.value, phoneNumber: form.fields.whatsApp.value}))
         navigate(ROUTES.HUB.CAMERAS)
     }
     const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {

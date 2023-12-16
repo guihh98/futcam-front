@@ -1,3 +1,5 @@
 
-Mtypescript:S1128"%Remove this unused import of 'Alert'.(ì¹¤‡ùÿÿÿÿ8óÖÑ¾1
-Atypescript:S125Q"Remove this commented out code.(Ñì‘8óÖÑ¾1
+Mtypescript:S1128"%Remove this unused import of 'Alert'.(ì¹¤‡ùÿÿÿÿ8ş­ÑÇÆ1
+Mtypescript:S1128"%Remove this unused import of 'Field'.(¥™éñøÿÿÿÿ8ÿ­ÑÇÆ1
+mtypescript:S6325k"EUse a regular expression literal instead of the 'RegExp' constructor.(·…–óıÿÿÿÿ8ÿ­ÑÇÆ1
+htypescript:S6325l"EUse a regular expression literal instead of the 'RegExp' constructor.(¥ƒ¨Ü8ÿ­ÑÇÆ1

@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface ButtonProps {
   mainColor?: string
   pressColor?: string
-  shandowColor?: string
+  shadowColor?: string
   fontSize?: string
 }
 
@@ -28,9 +28,9 @@ export const ButtonStyle = styled.div<ButtonProps>`
     text-shadow: 0px 1px 0px #000;
     filter: dropshadow(color=#000, offx=0px, offy=1px);
 
-    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor || '#05323D'};
-    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor || '#05323D'};
-    box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor || '#05323D'};
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowColor || '#05323D'};
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowColor || '#05323D'};
+    box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowColor || '#05323D'};
 
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -41,9 +41,9 @@ export const ButtonStyle = styled.div<ButtonProps>`
     top: 10px;
     background-color: ${(props) => props.pressColor || '#2DB9EA'};
 
-    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shandowColor || '#05323D'};
-    -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 ${(props) => props.shandowColor || '#05323D'};
-    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shandowColor || '#05323D'};
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shadowColor || '#05323D'};
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 ${(props) => props.shadowColor || '#05323D'};
+    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shadowColor || '#05323D'};
   }
 
   :after {

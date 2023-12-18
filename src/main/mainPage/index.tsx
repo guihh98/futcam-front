@@ -28,7 +28,7 @@ const matchName = useSelector((state: any) => state.startForm.matchName)
             </CameraContainer>
         </Row>
         <Row className='align-items-center'>
-            <ButtonPress content='GRAVAR' mainColor='#2BA026' pressColor='#25C61D' shandowColor='#155912' fontSize='7rem' />
+            <ButtonPress content='GRAVAR' mainColor='#2BA026' pressColor='#25C61D' shadowColor='#155912' fontSize='7rem' />
         </Row>
     </Container>
   )

@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
-import {Alert, Card, Form} from "react-bootstrap";
+import {Card, Form} from "react-bootstrap";
 import {FormWrapper} from "./styles";
 import {ButtonStyled} from "../../components/buttonStyled";
 import {ROUTES} from "../../sharedKernel/constants/routes";
 import {useNavigate} from "react-router-dom";
-import {FormFields, FormState, Field} from "./contracts";
+import {FormFields, FormState} from "./contracts";
 import InputMask from 'react-input-mask';
+import { useDispatch } from 'react-redux';
+import { update } from '../../store/slices/startForm';
 export const Registration = (): JSX.Element => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
     const [form, setForm] = useState<FormState>({
         fields: {
             name: {
@@ -42,6 +46,7 @@ export const Registration = (): JSX.Element => {
         if (!formValid){
             return 
         }
+        dispatch(update({name: form.fields.name.value, matchName: form.fields.teamName.value, phoneNumber: form.fields.whatsApp.value}))
         navigate(ROUTES.HUB.CAMERAS)
     }
     const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {
@@ -104,8 +109,8 @@ export const Registration = (): JSX.Element => {
                               name='whatsApp'
                               placeholder='WhatsApp'
                               value={form.fields.whatsApp.value}
-                              onChange={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
-                              onBlur={(e) => handleInputChange(e.target.name, e.target.value, new RegExp('^\\(\\d{2}\\) \\d{5}-\\d{4}$'))}
+                              onChange={(e) => handleInputChange(e.target.name, e.target.value, /^\(\d{2}\) \d{5}-\d{4}$/)}
+                              onBlur={(e) => handleInputChange(e.target.name, e.target.value, /^\(\d{2}\) \d{5}-\d{4}$/)}
                               className={`form-control ${(form.fields.whatsApp.isValid) ? 'is-valid' : ''} ${(!form.fields.whatsApp.isValid && form.fields.whatsApp.validated) ? 'is-invalid' : ''}`}
                           />
                       </Form.Group>

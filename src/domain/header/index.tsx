@@ -9,20 +9,19 @@ export interface HeaderProps {
 
 }
 
-// const configAction = () => {
-// }
-
-const getSettingsContent = (): JSX.Element => {
-    return <FontAwesomeIcon icon={faGear} style={{color: "#ffffff"}} size={"2x"} />
-}
 export const Header = (): JSX.Element => {
     const navigate = useNavigate()
+
+    const getSettingsContent = (): JSX.Element => {
+        return <FontAwesomeIcon icon={faGear} style={{color: "#ffffff"}} size={"2x"} />
+    }
+
     return (
     <HeaderContainer>
         <Logo onClick={() => {
             navigate(ROUTES.HOTSITE.ROOT)
         }}>
-            <LogoLetter>Fut</LogoLetter>
+            <LogoLetter>VAR</LogoLetter>
             <FontAwesomeIcon icon={faVideo} style={{color: "#ffffff"}} size={"3x"} />
         </Logo>
         <ButtonsWrapper>

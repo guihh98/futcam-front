@@ -1,4 +1,4 @@
-import { ButtonStyle } from "./styles";
+import { ButtonStyle } from './styles';
 
 export interface ButtonPressProps {
   content: string | JSX.Element
@@ -6,12 +6,21 @@ export interface ButtonPressProps {
   pressColor?: string
   shandowColor?: string
   fontSize?: string
+  className?: string
+  onClick?: () => void
 }
 
-export const ButtonPress = ({content, mainColor, pressColor, shandowColor, fontSize}: ButtonPressProps): JSX.Element => {
+export const ButtonPress = ({content, mainColor, pressColor, shandowColor, fontSize, className, onClick}: ButtonPressProps): JSX.Element => {
   return (
-    <ButtonStyle mainColor={mainColor} pressColor={pressColor} shandowColor={shandowColor} fontSize={fontSize}>
-        <a href="#">{content}</a>
+    <ButtonStyle
+      onClick={onClick}
+      className={className}
+      mainColor={mainColor}
+      pressColor={pressColor}
+      shandowColor={shandowColor}
+      fontSize={fontSize}
+    >
+      <a>{content}</a>
     </ButtonStyle>
   );
 }

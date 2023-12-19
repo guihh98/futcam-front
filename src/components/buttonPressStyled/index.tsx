@@ -10,7 +10,7 @@ export interface ButtonPressProps {
 
 export const ButtonPress = ({content, mainColor, pressColor, shadowColor, fontSize}: ButtonPressProps): JSX.Element => {
   return (
-    <ButtonStyle mainColor={mainColor} pressColor={pressColor} shadowColor={shadowColor} fontSize={fontSize}>
+    <ButtonStyle maincolor={mainColor} presscolor={pressColor} shadowcolor={shadowColor} fontSize={fontSize}>
         <a href="#">{content}</a>
     </ButtonStyle>
   );

@@ -5,6 +5,7 @@ import {Registration} from "../main/startForm";
 import {MainPage} from "../main/mainPage";
 import {Welcome} from "../main/welcome";
 import { SettingsPage } from '../main/settingsPage';
+import { LoginSettings } from '../main/loginSettings';
 export const RoutesBuilder = (): JSX.Element => {
     return (
         <Routes>
@@ -16,6 +17,7 @@ export const RoutesBuilder = (): JSX.Element => {
                 <Route path={ROUTES.HOTSITE.REGISTER} element={<Registration />} />
                 <Route path={ROUTES.HOTSITE.ROOT} element={<Welcome />} />
                 <Route path={ROUTES.HUB.CAMERAS} element={<MainPage />} />
+                <Route path={ROUTES.HOTSITE.SETTINGS.LOGIN} element={<LoginSettings />} />
                 <Route path={ROUTES.HOTSITE.SETTINGS.MAINPAGE} element={<SettingsPage />} />
             </Route>
             

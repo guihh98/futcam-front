@@ -7,3 +7,9 @@ export const FormWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+export const FormTitle = styled.h3`
+  color: #0b7ea2;
+  font-weight: bold;
+  margin-top: 20px;
+`

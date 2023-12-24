@@ -11,7 +11,7 @@ export const HeaderContainer = styled.div`
 `
 
 export const Logo = styled.div`
-    cursor: pointer;
+    user-select: none;
 `
 
 export const LogoLetter = styled.span`

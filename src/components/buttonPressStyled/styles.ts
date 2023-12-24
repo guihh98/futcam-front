@@ -15,7 +15,7 @@ export const ButtonStyle = styled.div<ButtonProps>`
   display: inline-block;
   margin: 20px;
 
-  a {
+  span {
     color: ${(props) => props.fontColor ?? 'white'} !important;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
@@ -40,7 +40,7 @@ export const ButtonStyle = styled.div<ButtonProps>`
     border-radius: 5px;
   }
 
-  a:active {
+  span:active {
     /* top: 5px; */
     background-color: ${(props) => props.pressColor ?? '#2DB9EA'};
 

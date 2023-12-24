@@ -20,7 +20,7 @@ export const ButtonPress = ({content, mainColor, pressColor, shandowColor, fontS
       shandowColor={shandowColor}
       fontSize={fontSize}
     >
-      <a>{content}</a>
+      <span>{content}</span>
     </ButtonStyle>
   );
 }

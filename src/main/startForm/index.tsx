@@ -8,6 +8,7 @@ import {FormFields, FormState} from "./contracts";
 import InputMask from 'react-input-mask';
 import { useDispatch } from 'react-redux';
 import { update } from '../../store/slices/startForm';
+import { updateMatch } from '../../store/slices/match';
 export const Registration = (): JSX.Element => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -47,6 +48,7 @@ export const Registration = (): JSX.Element => {
             return 
         }
         dispatch(update({name: form.fields.name.value, matchName: form.fields.teamName.value, phoneNumber: form.fields.whatsApp.value}))
+        dispatch(updateMatch({isOngoing: true}))
         navigate(ROUTES.HUB.CAMERAS)
     }
     const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {

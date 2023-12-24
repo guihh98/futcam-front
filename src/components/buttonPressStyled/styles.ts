@@ -14,6 +14,7 @@ export const ButtonStyle = styled.div<ButtonProps>`
   position: relative;
   display: inline-block;
   margin: 20px;
+  user-select: none;
 
   span {
     color: ${(props) => props.fontColor ?? 'white'} !important;

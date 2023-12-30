@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Card, Form} from "react-bootstrap";
+import {Button, Card, Form} from "react-bootstrap";
 import {FormWrapper, FormTitle} from "../startForm/styles";
 import {ButtonStyled} from "../../components/buttonStyled";
 import {ROUTES} from "../../sharedKernel/constants/routes";
@@ -10,6 +10,7 @@ import { update } from '../../store/slices/startForm';
 import { MenuOption } from '../../components/menuOption';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { BackButton } from './styles';
+import MyModal from '../../components/modal';
 export const LoginSettings = (): JSX.Element => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -34,14 +35,18 @@ export const LoginSettings = (): JSX.Element => {
             },
         }
     })
+
+    const [modalShow, setModalShow] = useState(false);
+    
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        const formValid = Object.values(loginForm.fields).every(field => field.isValid === true)
-        if (!formValid){
-            return 
-        }
-        dispatch(update({login: loginForm.fields.login.value, password: loginForm.fields.password.value}))
-        navigate(ROUTES.HOTSITE.SETTINGS.MAINPAGE)
+        setModalShow(true)
+        // const formValid = Object.values(loginForm.fields).every(field => field.isValid === true)
+        // if (!formValid){
+        //     return 
+        // }
+        // dispatch(update({login: loginForm.fields.login.value, password: loginForm.fields.password.value}))
+        // navigate(ROUTES.HOTSITE.SETTINGS.MAINPAGE)
     }
     const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {
         setLoginForm((prevForm) => ({
@@ -62,6 +67,11 @@ export const LoginSettings = (): JSX.Element => {
     }
         return (
             <div className=' w-100 h-100 d-flex flex-column'>
+                <MyModal show={modalShow} onHide={() => setModalShow(false)}
+                button={<>
+                    <Button variant='success' onClick={() => {}}>Sim</Button>
+                    <Button variant='danger' onClick={() => {}}>Não</Button>
+                </>}/>
                 <FormWrapper>
                     <Card
                         bg='light'

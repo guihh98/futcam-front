@@ -19,7 +19,7 @@ export const ButtonStyled = ({variant, size, className, content, disabled = fals
                 disabled={disabled}
                 onClick={onClick}
             >
-                <a>{content}</a>
+                {content}
             </button>
         </ButtonContainer>
     )

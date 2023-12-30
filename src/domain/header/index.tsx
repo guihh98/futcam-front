@@ -18,9 +18,7 @@ export const Header = (): JSX.Element => {
 
     return (
     <HeaderContainer>
-        <Logo onClick={() => {
-            navigate(ROUTES.HOTSITE.ROOT)
-        }}>
+        <Logo>
             <LogoLetter>VAR</LogoLetter>
             <FontAwesomeIcon icon={faVideo} style={{color: "#ffffff"}} size={"3x"} />
         </Logo>

@@ -10,14 +10,14 @@ export interface ButtonPressProps {
   onClick?: () => void
 }
 
-export const ButtonPress = ({content, mainColor, pressColor, shadowColor, fontSize}: ButtonPressProps): JSX.Element => {
+export const ButtonPress = ({content, mainColor, pressColor, shadowColor, fontSize,className, onClick}: ButtonPressProps): JSX.Element => {
   return (
     <ButtonStyle
       onClick={onClick}
       className={className}
-      mainColor={mainColor}
-      pressColor={pressColor}
-      shandowColor={shadowColor}
+      maincolor={mainColor}
+      presscolor={pressColor}
+      shadowcolor={shadowColor}
       fontSize={fontSize}
     >
       <span>{content}</span>

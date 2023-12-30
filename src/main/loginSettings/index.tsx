@@ -75,8 +75,8 @@ export const LoginSettings = (): JSX.Element => {
                               value={loginForm.fields.login.value}
                               isValid={loginForm.fields.login.isValid}
                               isInvalid={!loginForm.fields.login.isValid && loginForm.fields.login.validated}
-                              onChange={(e) => handleInputChange(e.target.name,e.target.value, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)}
-                              onBlur={(e) => handleInputChange(e.target.name,e.target.value, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)}
+                              onChange={(e) => handleInputChange(e.target.name,e.target.value, /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)}
+                              onBlur={(e) => handleInputChange(e.target.name,e.target.value, /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)}
                           />
                       </Form.Group>
                       <Form.Group className='mb-3' controlId='formBasicTeamName'>

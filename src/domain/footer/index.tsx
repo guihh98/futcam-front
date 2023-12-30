@@ -32,7 +32,7 @@ export const Footer = (): JSX.Element => {
       <Text>
         <p>WhatsApp: {phoneNumber} - {userName}</p>
       </Text>
-      <ButtonPress content='ENCERRAR PARTIDA' className='m-0' mainColor='#a00c0c' pressColor='#d81020' shandowColor='#490a0a' fontSize='1rem' onClick={endMatch} />
+      <ButtonPress content='ENCERRAR PARTIDA' className='m-0' mainColor='#a00c0c' pressColor='#d81020' shadowColor='#490a0a' fontSize='1rem' onClick={endMatch} />
     </FooterContainer>
     
   );

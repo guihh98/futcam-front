@@ -23,7 +23,7 @@ export const ButtonStyle = styled.div<ButtonProps>`
     font-size: ${(props) => props.fontSize ?? '36px'};
     text-align: center;
     text-decoration: none;
-    background-color: ${(props) => props.mainColor ?? '#053d4b'};
+    background-color: ${(props) => props.maincolor ?? '#053d4b'};
     display: block;
     position: relative;
     padding: 15px 40px;
@@ -32,9 +32,9 @@ export const ButtonStyle = styled.div<ButtonProps>`
     text-shadow: 0px 1px 0px #000;
     filter: dropshadow(color=#000, offx=0px, offy=1px);
 
-    /* -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor ?? '#05323D'}; */
-    /* -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor ?? '#05323D'}; */
-    /* box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shandowColor ?? '#05323D'}; */
+    /* -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowcolor ?? '#05323D'}; */
+    /* -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowcolor ?? '#05323D'}; */
+    /* box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 ${(props) => props.shadowcolor ?? '#05323D'}; */
 
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -43,11 +43,11 @@ export const ButtonStyle = styled.div<ButtonProps>`
 
   span:active {
     /* top: 5px; */
-    background-color: ${(props) => props.pressColor ?? '#2DB9EA'};
+    background-color: ${(props) => props.presscolor ?? '#2DB9EA'};
 
-    /* -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shandowColor ?? '#05323D'}; */
-    /* -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 ${(props) => props.shandowColor ?? '#05323D'}; */
-    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shandowColor ?? '#05323D'};
+    /* -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shadowcolor ?? '#05323D'}; */
+    /* -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 ${(props) => props.shadowcolor ?? '#05323D'}; */
+    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 ${(props) => props.shadowcolor ?? '#05323D'};
   }
 
   :after {

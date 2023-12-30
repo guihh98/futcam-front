@@ -3,9 +3,9 @@ import styled from 'styled-components';
 /* As linhas comentadas fazem o efeito do clique e da sombra, desabilitei  temporariamente */
 
 interface ButtonProps {
-  mainColor?: string
-  pressColor?: string
-  shandowColor?: string
+  maincolor?: string
+  presscolor?: string
+  shadowcolor?: string
   fontSize?: string
   fontColor?: string
 }

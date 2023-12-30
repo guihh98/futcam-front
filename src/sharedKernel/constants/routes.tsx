@@ -4,6 +4,7 @@ export const ROUTES = {
         ROOT: '/',
         REGISTER: '/registration',
         SETTINGS: {
+            LOGIN:'/login',
             MAINPAGE: '/settings',
             EVALUATOR: '/register/evaluator/:challengeId',
             RESOLVER: '/register/resolver'

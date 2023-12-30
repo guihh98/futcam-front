@@ -23,7 +23,7 @@ export const Header = (): JSX.Element => {
             <FontAwesomeIcon icon={faVideo} style={{color: "#ffffff"}} size={"3x"} />
         </Logo>
         <ButtonsWrapper>
-            <BaseButton variant={"outline-light"} size={"sm"} content={getSettingsContent()} onClick={() => navigate(ROUTES.HOTSITE.SETTINGS.MAINPAGE)} />
+            <BaseButton variant={"outline-light"} size={"sm"} content={getSettingsContent()} onClick={() => navigate(ROUTES.HOTSITE.SETTINGS.LOGIN)} />
         </ButtonsWrapper>
     </HeaderContainer>
   )

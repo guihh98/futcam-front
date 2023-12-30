@@ -5,14 +5,11 @@ import {ButtonStyled} from "../../components/buttonStyled";
 import {ROUTES} from "../../sharedKernel/constants/routes";
 import {useNavigate} from "react-router-dom";
 import {FormFields, FormState} from "./contracts";
-import { useDispatch } from 'react-redux';
-import { update } from '../../store/slices/startForm';
 import { MenuOption } from '../../components/menuOption';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { BackButton } from './styles';
 export const LoginSettings = (): JSX.Element => {
     const navigate = useNavigate()
-    const dispatch = useDispatch()
 
     const [loginForm, setLoginForm] = useState<FormState>({
         fields: {
@@ -40,7 +37,6 @@ export const LoginSettings = (): JSX.Element => {
         if (!formValid){
             return 
         }
-        dispatch(update({login: loginForm.fields.login.value, password: loginForm.fields.password.value}))
         navigate(ROUTES.HOTSITE.SETTINGS.MAINPAGE)
     }
     const handleInputChange = (fieldName: string, value:string, regex: RegExp):void => {
